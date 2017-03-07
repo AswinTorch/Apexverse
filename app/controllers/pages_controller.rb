@@ -3,4 +3,8 @@ class PagesController < ApplicationController
     end
     def about
     end
+    def riddle
+    end
+    def services
+    end
 end

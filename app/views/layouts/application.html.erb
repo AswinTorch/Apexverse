@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Website</title>
+    <title>ApexVerse</title>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6906335457793789",
+        enable_page_level_ads: true
+      });
+    </script>
     <%= csrf_meta_tags %>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <%= favicon_link_tag 'favicon.ico' %>
+    <link href="//fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Open+Sans|Questrial|Russo+One|Lato|Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <!--NavBar-->
+    <!--Nav Bar-->
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class='container'>
+      <div>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -26,23 +36,65 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact Us", new_contact_path %></li>
+            <li class="<%= 'active' if current_page?(riddle_path) %>"><%= link_to "Riddle", riddle_path %></li>
+            <li class="<%= 'active' if current_page?(services_path) %>"><%= link_to "Services", services_path %></li>
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
+            <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
     
-    <div class = "container">
-      <% flash.each do |type, msg| %>
-        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+
+    <!--Dynamic Flash Message-->
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info" %>
       <% end %>
     </div>
     
     
-    <!--Content-->
-    
+    <!--Main Content-->
     <%= yield %>
+    
+    <!-- Footer -->
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                             <a href="https://twitter.com/ApexVerse" target= "_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ApexVerse/" target=_blank>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted text-center">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     
   </body>
 </html>
