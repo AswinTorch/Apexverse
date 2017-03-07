@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   root to: 'pages#home'
   get 'services', to: 'pages#services'
   get 'riddle', to: 'pages#riddle'

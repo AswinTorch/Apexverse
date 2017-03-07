@@ -37,6 +37,7 @@
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="<%= 'active' if current_page?(riddle_path) %>"><%= link_to "Riddle", riddle_path %></li>
+            <li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Media Blog", posts_path %></li>
             <li class="<%= 'active' if current_page?(services_path) %>"><%= link_to "Services", services_path %></li>
             <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
