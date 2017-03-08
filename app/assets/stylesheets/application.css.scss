@@ -19,6 +19,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 h1, h2{
   font-family: 'Questrial', sans-serif;
 }
@@ -110,14 +111,14 @@ hr {
 
 
 .navbar-default .navbar-nav > .active{
-    color: #000;
-   background: #d65c14;
+  color: #000;
+  background: #F1F1F1;
  }
  .navbar-default .navbar-nav > .active > a, 
  .navbar-default .navbar-nav > .active > a:hover, 
  .navbar-default .navbar-nav > .active > a:focus {
-      color: #000;
-      background: #d65c14;
+    color: #000;
+    background: #F1F1F1;
  }
  
 

@@ -15,3 +15,18 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+
+// Google Maps Script for Home Page
+function initMap() {
+  var uluru = {lat: 40.781663, lng: -73.966595};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}

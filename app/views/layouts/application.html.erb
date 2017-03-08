@@ -61,10 +61,10 @@
     <%= yield %>
     
     <!-- Footer -->
-    <hr>
-    <footer>
-        <div class="container">
-            <ul class="list-inline text-center">
+    
+    <footer class = "w3-light-grey">
+        <div class="container text-center">
+            <ul class="list-inline">
               <li>
                 <a href="https://twitter.com/ApexVerse" target= "_blank">
                   <span class="fa-stack fa-lg">
@@ -90,10 +90,11 @@
                   </a>
               </li>
           </ul>
-          <p class="copyright text-muted text-center">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>
+          <div class= "container text-center">  
+            <p class="copyright text-muted">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>
+          </div>        
         </div>
     </footer>
-    
     
   </body>
 </html>
