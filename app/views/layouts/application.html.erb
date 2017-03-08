@@ -42,6 +42,7 @@
             <li class="<%= 'active' if current_page?(services_path) %>"><%= link_to "Services", services_path %></li>
             <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
+            <li class="<%= 'active' if current_page?(new_post_path) %>"><%= link_to 'New Post', new_post_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -63,40 +64,38 @@
     <hr>
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center ">
-                        <li>
-                             <a href="https://twitter.com/ApexVerse" target= "_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/ApexVerse/" target=_blank>
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted text-center">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>
-                </div>
-            </div>
+            <ul class="list-inline text-center">
+              <li>
+                <a href="https://twitter.com/ApexVerse" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                  <a href="https://www.instagram.com/ApexVerse/" target=_blank>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+              </li>
+          </ul>
+          <p class="copyright text-muted text-center">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>
         </div>
     </footer>
     
     
   </body>
 </html>
+
+  
