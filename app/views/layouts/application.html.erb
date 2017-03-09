@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html>
-<title>Coming Soon</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('http://www.hdwallpapers.in/download/earth_from_space_4k-5120x2880.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-</style>
-<body>
+  <head>
+    <title>ApexVerse</title>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6906335457793789",
+        enable_page_level_ads: true
+      });
+    </script>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Open+Sans|Questrial|Russo+One|Lato|Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    ApexVerse
-  </div>
-  <div class="container w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top w3-center">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
+  <body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <i class="fa fa-fire"></i>
+            ApexVerse
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= 'active' if current_page?(riddle_path) %>"><%= link_to "Riddle", riddle_path %></li>
+            <li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Media Blog", posts_path %></li>
+            <li class="<%= 'active' if current_page?(services_path) %>"><%= link_to "Services", services_path %></li>
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
+            <li class="<%= 'active' if current_page?(new_contact_path) %>"><%= link_to "Contact Us", new_contact_path %></li>
+            <li class="<%= 'active' if current_page?(new_post_path) %>"><%= link_to 'New Post', new_post_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    
+
+    <!--Dynamic Flash Message-->
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info" %>
+      <% end %>
+    </div>
     
     
-    <!-- Display the countdown timer in an element -->
-<p class="w3-large w3-center" id="demo" style="color: #ffffff; background-color: #000000; opacity: .60; border-radius: 25px" ></p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Mar 28, 2017 24:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-  </div>
-</div>
-
-</body>
+    <!--Main Content-->
+    <%= yield %>
+    
+     <!--Footer -->
+    
+    <footer class = "w3-light-grey">
+        <div class="container text-center">
+            <ul class="list-inline">
+              <li>
+                <a href="https://twitter.com/ApexVerse" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/ApexVerse-1664390790528809/" target= "_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                  <a href="https://www.instagram.com/ApexVerse/" target=_blank>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+              </li>
+            <p class="copyright text-muted text-align:center">Copyright <%= link_to "\u00A9", new_contact_path %> ApexVerse 2017</p>  
+          </ul>
+        </div>
+    </footer>
+    
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-  

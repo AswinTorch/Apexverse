@@ -30,7 +30,8 @@ h3 {
 }
 
 
-//Gradient
+//Nav Bar
+
 .navbar, .home-callout {
   background: #FFFFFF;
 }
@@ -54,7 +55,6 @@ h3 {
   padding-bottom: 0px;
 }
 
-//Navbar Stuff
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   font-size: 150%;
@@ -95,20 +95,6 @@ h3 {
 .item {
   size: 900 x 350;
 }
-
-
-
-footer {
-  
-  padding:50px 0 65px;
-}
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
-}
-
 
 .navbar-default .navbar-nav > .active{
   color: #000;
@@ -209,6 +195,17 @@ header .intro-text .skills {
   header .intro-text .skills {
     font-size: 1.75em;
   }
+}
+
+footer {
+  
+  padding:50px 0 65px;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
 }
 
 hr.star-light,
