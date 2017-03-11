@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
-    def home
-    end
-    def about
-    end
-    def riddle
-    end
-    def services
-    end
+  def home
+  end
+  def about
+  end
+  def riddle
+  end
+  def market
+  end
 end

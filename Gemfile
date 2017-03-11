@@ -36,8 +36,13 @@ gem 'hirb', '0.7.3'
 # Use Devise for authentication
 gem 'devise'
 
-gem 'owlcarousel-rails'
+# Use tinymce for text areas (blog)
+gem 'tinymce-rails'
 
+# gem 'owlcarousel-rails' REMOVE GEM
+
+gem 'meta-tags'
+gem 'social-share-button'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

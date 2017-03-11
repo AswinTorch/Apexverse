@@ -10,10 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require social-share-button
  *= require_tree .
  *= require_self
  */
- 
+
+@import "social-share-button";
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import "font-awesome-sprockets";
@@ -255,7 +257,22 @@ a {
 	color: inherit;
 }
 
+
+// Show Posts
+
 #post_container{
-  padding-top: 20px;
-  margin: 20px;
+  margin-top: 20px;
+  border: 50px;
 }
+
+#post_title{
+  font-size: 300%;
+}
+
+#post_Name{
+  font-size: 150%;
+}
+#post_comments{
+  padding: 0;
+}
+

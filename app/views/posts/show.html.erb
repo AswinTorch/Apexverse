@@ -1,18 +1,23 @@
-<div class="container" id= "post_container">
+<div class="container text-center-left" id= "post_container">
   
-  <p>
-    <strong>Name:</strong>
-    <%= @post.name %>
-  </p>
-  
-  <p>
-    <strong>Title:</strong>
+   <p id= "post_title">
     <%= @post.title %>
   </p>
   
-  <p>
+  <p id= "post_Name">
+    <br>
+    <%= @post.name %>
+  </p>
+  
+  <div>
+    
+    <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar") %>
+    
+  </div>
+
+  <p id= "post_content">
     <strong>Content:</strong>
-    <%= @post.content %>
+    <%= raw @post.content %>
   </p>
   
   <%= link_to 'Back', posts_path , :class => 'btn btn-default'%>
@@ -21,11 +26,11 @@
     <%= link_to 'Delete', post_path(@post), method: :delete, :class => 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
   <% end %>
   
-  <h2>Comments</h2>
-  <%= render @post.comments %>
-  
-  
-  <h2>Add a comment:</h2>
-  <%= render "comments/form" %>
-  
+  <div class= "well" id="post_comments">
+    <h2>Comments</h2>
+    <%= render @post.comments %>
+  </div>  
+    
+    <h2>Add a comment:</h2>
+    <%= render "comments/form" %>
 </div>

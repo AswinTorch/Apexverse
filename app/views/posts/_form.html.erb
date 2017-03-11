@@ -12,8 +12,10 @@
 
   <div class="field form-group">
     <%= f.label :content %>
-    <%= f.text_area :content , class: 'form-control' %>
+    <%= f.text_area :content , class: 'form-control', :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
+  
+  <%= tinymce %>
   
   <div class="actions form-group">
     <%= f.submit "Save Post", :class => 'btn btn-primary'%>

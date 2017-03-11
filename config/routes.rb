@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   root to: 'pages#home'
-  get 'services', to: 'pages#services'
+  get 'market', to: 'pages#market'
+  resources :order
+  
   get 'riddle', to: 'pages#riddle'
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
