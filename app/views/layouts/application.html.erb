@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ApexVerse</title>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      ApexVerse
+    </title>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -37,7 +40,6 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="<%= 'active' if current_page?(riddle_path) %>"><%= link_to "Riddle", riddle_path %></li>
             <li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to "Media Blog", posts_path %></li>
             <li class="<%= 'active' if current_page?(market_path) %>"><%= link_to "Market", market_path %></li>
             <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>

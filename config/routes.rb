@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   end
   root to: 'pages#home'
   get 'market', to: 'pages#market'
-  resources :order
-  
   get 'riddle', to: 'pages#riddle'
   get 'about', to: 'pages#about'
   resources :contacts, only: :create

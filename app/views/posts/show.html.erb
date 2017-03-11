@@ -1,24 +1,34 @@
+<% title @post.title %>
 <div class="container text-center-left" id= "post_container">
   
-   <p id= "post_title">
-    <%= @post.title %>
-  </p>
-  
-  <p id= "post_Name">
-    <br>
-    <%= @post.name %>
-  </p>
-  
-  <div>
-    
-    <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar") %>
-    
+  <!-- Page Header -->
+  <meta name="description" content="<%= h truncate(@post.content, :length => 255) %>">
+  <header class="intro-header" style="background-image: url('<%= @post.banner_image_url %>')">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="post-heading">
+                      <h1 id="post_title"><%= @post.title %></h1>
+                      <span class="meta" id="post_info">Posted by <p><%= @post.name %></p> on <%= @post.created_at.strftime("%B, %d, %Y") %></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <br>
+  <div> 
+    <%= social_share_button_tag(@post.title) %>
   </div>
-
-  <p id= "post_content">
-    <strong>Content:</strong>
-    <%= raw @post.content %>
-  </p>
+  <br>
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <p id="post_content"><%= @post.content %></p>
+        </div>
+      </div>
+    </div>
+  </article>
   
   <%= link_to 'Back', posts_path , :class => 'btn btn-default'%>
   <% if user_signed_in? %>

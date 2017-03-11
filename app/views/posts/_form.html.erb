@@ -11,11 +11,14 @@
   </div>
 
   <div class="field form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content , class: 'form-control', :class => "tinymce", :rows => 40, :cols => 120 %>
+    <%= f.label :banner_image_url %>
+    <%= f.text_field :banner_image_url , class: 'form-control' %>
   </div>
   
-  <%= tinymce %>
+  <div class="field form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content , class: 'form-control' %>
+  </div>
   
   <div class="actions form-group">
     <%= f.submit "Save Post", :class => 'btn btn-primary'%>

@@ -32,6 +32,11 @@ h3 {
 }
 
 
+
+body {
+  
+}
+
 //Nav Bar
 
 .navbar, .home-callout {
@@ -261,16 +266,22 @@ a {
 // Show Posts
 
 #post_container{
-  margin-top: 20px;
+  margin-top: 29px;
   border: 50px;
 }
 
 #post_title{
-  font-size: 300%;
+  font-size: 500%;
 }
 
-#post_Name{
-  font-size: 150%;
+#post_info {
+  font-size: 20px;
+}
+
+#post_content {
+  line-height: 1.5;
+  margin: 30px 0;
+  font-size: 20px;
 }
 #post_comments{
   padding: 0;
