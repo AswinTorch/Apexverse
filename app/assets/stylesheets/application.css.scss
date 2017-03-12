@@ -14,162 +14,87 @@
  *= require_tree .
  *= require_self
  */
-
 @import "social-share-button";
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
+// OVERALL THEME AND FONTS
+// Headings Font
 h1, h2{
   font-family: 'Questrial', sans-serif;
 }
 
-h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 250%;
-}
-
-
-
-body {
+// NAVBAR
+// Navbar Overall Look
+.navbar {
+  background: #FFFFFF;
+  border:none;
+  margin-bottom: 0px;
+  padding-bottom: -10px;
   
 }
-
-//Nav Bar
-
-.navbar, .home-callout {
-  background: #FFFFFF;
-}
-
-.navbar-default .navbar-toggle .icon-bar{
-  background-color:black;
-}
-
-.navbar-default .navbar-toggle{
+// Hamburger Menu for Mobile
+.navbar-default {
+  .navbar-toggle{
   border:none;
-  &:hover, &:focus {
-    background-color:#2C3E50;
+    &:hover, &:focus {
+      background-color:#f9f9f9;
+    }
+  }
+  // Bolded "Logo" Text
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 150%;
+    font-family: 'Questrial', sans-serif;
+    color:black;
+    border:none;
+    &:hover {
+      color: gray;
+      background:white;
+    }
   }
 }
-
-.home-callout {
-  color:black;
-  border-top: 100px;
-  margin-top: 0px;
-  padding-top: 40px;
-  padding-bottom: 0px;
-}
-
-.navbar-default .navbar-brand,
+// Navbar Hover Tabs
 .navbar-default .navbar-nav > li > a {
   font-size: 150%;
   font-family: 'Questrial', sans-serif;
   color:black;
   border:none;
   &:hover {
-    background-color:#efefef;
+    color: gray;
   }
 }
-
-#navtabs {
-  padding-right: 0;
-  &:hover{
-    background: #f9f9f9;  
-  }
-}
-
+// Navbar Spacing Right
 .navbar-right{
   margin-right: 10px;
 }
-.navbar {
-  border:none;
-  margin-bottom: 0px;
-  padding-bottom: -10px;
-}
-
-.navbar-default .navbar-brand {
-  font-family: 'Russo One', sans-serif;
-}
-
+// Hamburger Menu Collapse Styling
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   border-top: none;
   border-bottom: 20px;
   border-color: none;
  }
- 
-.item {
-  size: 900 x 350;
-}
-
+// Active Tab
 .navbar-default .navbar-nav > .active{
   color: #000;
   background: #F1F1F1;
- }
- .navbar-default .navbar-nav > .active > a, 
- .navbar-default .navbar-nav > .active > a:hover, 
- .navbar-default .navbar-nav > .active > a:focus {
-    color: #000;
-    background: #F1F1F1;
- }
- 
-
-#white_text{
-  color:white;
-}
-
-.image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
-   
-}
-
-#pic {
-  max-width: 100%;
-    max-height: 100%;
-}
-
-#homeh1 { 
-   position: absolute; 
-   top: 200px; 
-   left: 0; 
-   width: 100%; 
-}
-
-#homeh1 span { 
-   color: white; 
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 0; 
-}
-#homeh1 span.spacer {
-   padding:0 5px;
-}
-
-// Active tabs
-.navbar-default .navbar-nav > .active > a {
-  border-bottom:3px solid #c60000;
-  background:white;
-  &:hover {
-    background:#efefef;
+  a {
+    border-bottom:3px solid black;
+    background:white;
+    &:hover {
+      border-bottom:3px solid black;
+      background:white;
+    }
   }
-}
+ }
 
-.post-title, {
-  color:black;
-  font-family: 'Questrial', sans-serif;
-}
 
-.post-subtitle {
-  color:black;
-  font-family: 'Questrial', sans-serif;
-  font-size:20px;
-}
-
+//HOME PAGE LAYOUT
 header {
   text-align: center;
-  background: #870000;
+  background: white;
   color: white;
 }
 header .container {
@@ -182,6 +107,7 @@ header img {
 }
 header .intro-text .name {
   display: block;
+  color:black;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -193,28 +119,23 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 300px;
+    padding-bottom: 300px;
   }
   header .intro-text .name {
     font-size: 4.75em;
   }
   header .intro-text .skills {
     font-size: 1.75em;
+    color:black;
   }
 }
-
-footer {
-  
-  padding:50px 0 65px;
-}
 hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid black;
 }
-
 hr.star-light,
 hr.star-primary {
   padding: 0;
@@ -235,49 +156,43 @@ hr.star-primary:after {
   padding: 0 0.25em;
 }
 hr.star-light {
-  border-color: white;
+  border-color: black;
 }
 hr.star-light:after {
-  background-color: #870000;
-  color: white;
+  background-color: white;
+  color: black;
 }
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: black;
 }
 hr.star-primary:after {
-  background-color: white;
-  color: #2C3E50;
+  background-color: black;
+  color: black;
+}
+// Home Sections
+#home-section-black {
+  background: #0F1113;
+}
+#home-section-white {
+  background: white;
 }
 
-html, body {
-	font-family: 'Raleway', sans-serif;
+// FOOTER
+footer {
+  padding:50px 0 65px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-
-// Show Posts
-
+// POST STYLINGS
 #post_container{
   margin-top: 29px;
   border: 50px;
 }
-
 #post_title{
   font-size: 500%;
 }
-
 #post_info {
   font-size: 20px;
 }
-
 #post_content {
   line-height: 1.5;
   margin: 30px 0;
@@ -287,5 +202,110 @@ a {
   padding: 0;
 }
 
-//Market
+// TRANSITIONS
+// Black Buttons
+.w3-button, .w3-black, .w3-padding-large{
+  &:hover {
+    background-color: #2C2C2C;
+    transition: all 0.3s ease 0s;
+    box-shadow: inset 0 0 0 5px #2C2C2C;
+  }
+}
 
+// MISCALLANEOUS
+// Link Styling
+a {
+	text-decoration: none;
+	color: inherit;
+}
+// Buttons
+.invert-button {
+  font-weight: 400;
+  color: black;
+  outline: none;
+  border: 1px solid black;
+  font-size: 1em;
+  padding: 0.6em 3em;
+  background: transparent;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  &:hover {
+    border: 1px solid black;
+    background: black;
+    color: #fff;
+  }
+}
+// Forms
+.contact-text-field-name {
+  width: 49.5%;
+  font-size: 1em;
+  margin-bottom: 2em;
+  color: rgb(194, 193, 203);
+  font-weight: 400;
+  font-family: Lato, sans-serif;
+  padding: 13px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(226, 224, 237);
+  border-image: initial;
+  background: rgb(255, 255, 255);
+  outline: none;
+  transition: all 0.5s ease;
+  &:hover{
+    border: 1px solid black;
+  }
+}
+.contact-text-field-email {
+  width: 49.5%;
+  font-size: 1em;
+  margin-left: .5em;
+  margin-bottom: 2em;
+  color: rgb(194, 193, 203);
+  font-weight: 400;
+  font-family: Lato, sans-serif;
+  padding: 13px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(226, 224, 237);
+  border-image: initial;
+  background: rgb(255, 255, 255);
+  outline: none;
+  transition: all 0.5s ease;
+  &:hover{
+    border: 1px solid black;
+  }
+}
+.contact-text-area {
+  resize: none;
+  height: 200px;
+  width: 100%;
+  margin-right: 0%;
+  padding: 12px;
+  border: 1px solid #E2E0ED;
+  font-size: 1em;
+  margin-bottom: 2em;
+  color: #C2C1CB;
+  background: #fff;
+  outline: none;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  &:hover{
+    border: 1px solid black;
+  }
+}
+.form-group {
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+
+//Market Styling
+
+#market_items{
+  border: solid 1px;
+  border-color: gray;
+}

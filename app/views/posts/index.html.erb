@@ -24,10 +24,10 @@
           <p><%=h truncate(post.content, :length => 323) %></p>
           <div class="w3-row">
             <div class="w3-col m8 s12">
-              <%= link_to "READ MORE »", post, class: 'w3-button w3-black w3-padding-large' %>
+              <%= link_to "READ MORE »", post, class: 'w3-button w3-black w3-padding-large w3-hover-white' %>
             </div>
             <div class="w3-col m4 w3-hide-small">
-              <p><span class="w3-padding-large w3-right"><b>Comments </b> <span class="w3-tag"><%= post.comments.size %></span></span></p>
+              <p><span class="w3-padding-large w3-right w3-hover-white"><b>Comments </b> <span class="w3-tag"><%= post.comments.size %></span></span></p>
             </div>
           </div>
         </div>

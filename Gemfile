@@ -39,6 +39,7 @@ gem 'devise'
 gem 'meta-tags'
 gem 'social-share-button'
 gem 'stripe'
+gem 'bootstrap-tooltip-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
