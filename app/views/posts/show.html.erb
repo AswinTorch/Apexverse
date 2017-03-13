@@ -5,15 +5,19 @@
   <meta name="description" content="<%= h truncate(@post.content, :length => 255) %>">
   <div class="intro-header")>
       <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  <div class="post-heading">
-                      <h1 id="post_title"><%= @post.title %></h1>
-                      <span class="meta" id="post_info">Posted by <p><%= @post.name %></p> on <%= @post.created_at.strftime("%B, %d, %Y") %></span>
-                      <p>Tags: <%= raw @post.tags.map { |t| link_to t.name, posts_path(tag: t) }.join(', ') %></p>
-                  </div>
+        <div class="post-heading">
+          <h1 id="post_title"><%= @post.title %></h1>
+          <div class="w3-col l8 s12">
+              <div class="w3-container w3-padding-8">
+                <span class="meta" id="post_info"><%= @post.name %></p>
+              </div>
+              <div class="w3-container w3-padding-8">
+                <%= @post.created_at.strftime("%B, %d, %Y") %></span>
               </div>
           </div>
+        </div>
+          <p>Tags: <%= raw @post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %></p>
+        </div>
       </div>
   </div>
   <br>

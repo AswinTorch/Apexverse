@@ -189,6 +189,7 @@ footer {
 }
 #post_title{
   font-size: 500%;
+  margin-bottom: -3px;
 }
 #post_info {
   font-size: 20px;
@@ -202,6 +203,23 @@ footer {
 #post_comments{
   padding: 0;
 }
+
+$size: 30px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    border: 0px;
+  }
+}
+
+#post_name{
+  font-size: 100%;
+  color: grey;
+}
+
 
 // TRANSITIONS
 // Black Buttons
@@ -305,12 +323,5 @@ a {
 
 //Market Styling
 
-#market_items {
-    background-color: white;
-    width: 300px;
-    height: 300px;
-    border: 1px solid grey;
-    padding: 25px;
-    margin: 25px;
-    -webkit-column-count: 3;
-}
+
+
