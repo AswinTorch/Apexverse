@@ -3,18 +3,19 @@
   
   <!-- Page Header -->
   <meta name="description" content="<%= h truncate(@post.content, :length => 255) %>">
-  <header class="intro-header" style="background-image: url('<%= @post.banner_image_url %>')">
+  <div class="intro-header")>
       <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   <div class="post-heading">
                       <h1 id="post_title"><%= @post.title %></h1>
                       <span class="meta" id="post_info">Posted by <p><%= @post.name %></p> on <%= @post.created_at.strftime("%B, %d, %Y") %></span>
+                      <p>Tags: <%= raw @post.tags.map { |t| link_to t.name, posts_path(tag: t) }.join(', ') %></p>
                   </div>
               </div>
           </div>
       </div>
-  </header>
+  </div>
   <br>
   <div> 
     <%= social_share_button_tag(@post.title) %>
@@ -22,11 +23,7 @@
   <br>
   <article>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <p id="post_content"><%= @post.content %></p>
-        </div>
-      </div>
+      <p id="post_content"><%= @post.content %></p>
     </div>
   </article>
   
