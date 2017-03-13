@@ -5,7 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Plan.create(name: 'bronze', price: 249)
-Plan.create(name: 'silver', price: 499)
-Plan.create(name: 'gold', price: 999)
