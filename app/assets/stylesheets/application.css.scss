@@ -119,8 +119,8 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding-top: 125px;
+    padding-bottom: 125px;
   }
   header .intro-text .name {
     font-size: 4.75em;
@@ -177,6 +177,13 @@ hr.star-primary:after {
   background: white;
 }
 
+#logo{
+
+  padding: 70px 0;
+  
+}
+
+
 // FOOTER
 footer {
   padding:50px 0 65px;
@@ -186,10 +193,6 @@ footer {
 #post_container{
   margin-top: 29px;
   border: 50px;
-}
-#post_title{
-  font-size: 500%;
-  margin-bottom: -3px;
 }
 #post_info {
   font-size: 20px;

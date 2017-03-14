@@ -41,6 +41,7 @@ gem 'social-share-button'
 gem 'stripe'
 gem 'bootstrap-tooltip-rails'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'tinymce-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

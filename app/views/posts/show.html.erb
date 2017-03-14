@@ -1,21 +1,10 @@
-<% title @post.title %>
 <div class="container text-center-left" id= "post_container">
-  
-  <!-- Page Header -->
   <meta name="description" content="<%= h truncate(@post.content, :length => 255) %>">
   <div class="intro-header")>
       <div class="container">
         <div class="post-heading">
           <h1 id="post_title"><%= @post.title %></h1>
-          <div class="w3-col l8 s12">
-              <div class="w3-container w3-padding-8">
-                <span class="meta" id="post_info"><%= @post.name %></p>
-              </div>
-              <div class="w3-container w3-padding-8">
-                <%= @post.created_at.strftime("%B, %d, %Y") %></span>
-              </div>
-          </div>
-        </div>
+            <span class="meta" id="post_info"><p id="post_name"><%= @post.name %></p><%= @post.created_at.strftime("%B, %d, %Y") %></span>
           <p>Tags: <%= raw @post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %></p>
         </div>
       </div>
@@ -27,7 +16,7 @@
   <br>
   <article>
     <div class="container">
-      <p id="post_content"><%= @post.content %></p>
+      <p id="post_content"><%= @post.content.html_safe %></p>
     </div>
   </article>
   
@@ -36,6 +25,7 @@
     <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-warning' %>
     <%= link_to 'Delete', post_path(@post), method: :delete, :class => 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
   <% end %>
+  
   
   <div class= "well" id="post_comments">
     <h2>Comments</h2>

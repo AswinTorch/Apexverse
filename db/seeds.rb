@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Plan.create(name: 'quark', price: 249)
+Plan.create(name: 'lepton', price: 499)
+Plan.create(name: 'proton', price: 999)
