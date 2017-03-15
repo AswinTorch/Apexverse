@@ -8,4 +8,8 @@ class ProductsController < ApplicationController
     @lepton_order = Order.find(2)
     @proton_order = Order.find(3)
   end
+  
+  def lepton_order
+    
+  end
 end
